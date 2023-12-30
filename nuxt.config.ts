@@ -7,4 +7,5 @@ export default defineNuxtConfig({
     defaultLocale: "en",
     locales: ["en", "pt"],
   },
+  build: { transpile: ["gsap"] },
 });
