@@ -16,6 +16,13 @@ const { locale } = useI18n();
 // });
 
 useHead({
+  title: "Eduardo Garcia · Full Stack Developer",
+  meta: [
+    {
+      name: "description",
+      content: "Full stack developer creating amazing experiences",
+    },
+  ],
   link: [
     {
       rel: "stylesheet",
@@ -37,5 +44,3 @@ useHead({
     <Footer />
   </div>
 </template>
-
-<style scoped></style>
