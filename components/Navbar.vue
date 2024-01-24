@@ -8,7 +8,7 @@
 nav {
   width: 100vw;
   max-width: 100%;
-  height: 90px;
+  height: 70px;
   background-color: royalblue;
   position: absolute;
   top: 0;

@@ -38,10 +38,4 @@ useHead({
   </div>
 </template>
 
-<style scoped>
-nav {
-  width: 100vw;
-  height: 90px;
-  background-color: rebeccapurple;
-}
-</style>
+<style scoped></style>
