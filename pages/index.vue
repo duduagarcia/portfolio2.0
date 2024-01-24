@@ -29,6 +29,12 @@ useHead({
   <div>
     <Navbar />
     <Hero />
+    <Intro />
+    <LazyWorks />
+    <LazyAbout />
+    <Experiences />
+    <LazySkills />
+    <Footer />
   </div>
 </template>
 

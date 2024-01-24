@@ -1,12 +1,12 @@
 <script setup></script>
 
 <template>
-  <main class="container"><p>MAIN</p></main>
+  <div class="container"><p>About</p></div>
 </template>
 
 <style scoped>
-main {
+div {
   height: 100vh;
-  background-color: yellow;
+  background-color: salmon;
 }
 </style>

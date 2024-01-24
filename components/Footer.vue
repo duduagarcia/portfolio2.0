@@ -1,12 +1,12 @@
 <script setup></script>
 
 <template>
-  <main class="container"><p>MAIN</p></main>
+  <footer class="container"><p>Footer</p></footer>
 </template>
 
 <style scoped>
-main {
+footer {
   height: 100vh;
-  background-color: yellow;
+  background-color: slateblue;
 }
 </style>
