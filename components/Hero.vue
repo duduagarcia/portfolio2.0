@@ -30,7 +30,8 @@ main {
 
 h1 {
   font-size: calc(2.375rem + 2.5vw);
-  /* font-weight: 600; */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 main .subtitle {
@@ -45,7 +46,7 @@ main .subtitle p {
 }
 
 main .subtitle div p {
-  width: 280px;
+  max-width: 280px;
   text-transform: none;
   margin-bottom: 25px;
 }
