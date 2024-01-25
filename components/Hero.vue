@@ -1,8 +1,21 @@
-<script setup></script>
+<script setup>
+const { gsap, ScrollTrigger, ScrollToPlugin } = useGsap();
+
+const h1 = ref(null);
+onMounted(() => {
+  gsap.from(h1.value, {
+    y: 300,
+    opacity: 0,
+    ease: "expo.out",
+    duration: 2,
+    delay: 2,
+  });
+});
+</script>
 
 <template>
   <main class="container">
-    <h1>Building experiences, not just static interfaces</h1>
+    <h1 ref="h1">Building experiences, not just static interfaces</h1>
     <div class="subtitle">
       <p>Developer, Motion Designer<br />& Freelancer</p>
       <div>
