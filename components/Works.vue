@@ -3,12 +3,17 @@ console.log("works.vue");
 </script>
 
 <template>
-  <div class="container"><p>WORKS</p></div>
+  <div>
+    <BG color="light" />
+    <div class="container"><p>WORKS</p></div>
+  </div>
 </template>
 
 <style scoped>
-div {
+.container {
+  position: relative;
+  z-index: 2;
   height: 100vh;
-  background-color: teal;
+  border: 1px solid teal;
 }
 </style>

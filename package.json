@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@studio-freight/lenis": "^1.0.34",
-    "gsap": "^3.12.4"
+    "gsap": "^3.12.4",
+    "split-type": "^0.3.4"
   }
 }

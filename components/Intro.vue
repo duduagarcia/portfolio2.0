@@ -1,34 +1,47 @@
-<script setup></script>
+<script setup>
+import SplitType from "split-type";
+const { gsap } = useGsap();
+
+onMounted(() => {
+  // const text = document.querySelectorAll(".h2");
+  // text.forEach((el, index) => {
+  //   const splitedText = new SplitType(el, { types: "chars,words" });
+  //   splitedText.chars.forEach((char) => {
+  //     // Adicione a classe 'char' a cada letra
+  //     char.classList.add("char", `teste`);
+  //   });
+  //   gsap.from(el.querySelector("h2::before"), {
+  //     width: 0.2,
+  //     stagger: 0.1,
+  //     duration: 1,
+  //     scrollTrigger: {
+  //       trigger: el,
+  //       start: "top 70%",
+  //       end: "0% 0%",
+  //       markers: true,
+  //       toggleActions: "restart none none none",
+  //       scrub: 2,
+  //     },
+  //   });
+  // });
+});
+</script>
 
 <template>
-  <div class="container">
-    <p>Not just a developer, but a <span>problem solver</span></p>
-    <h2>Guided by discoveries</h2>
-    <h2>Boosted by research</h2>
-    <h2>Who designes with purpose</h2>
-    <h2>And develop for people</h2>
-    <h2>To achieve tangible results</h2>
+  <div>
+    <BG color="dark" />
+    <div class="container">
+      <p style="color: #fff">intro</p>
+    </div>
   </div>
 </template>
 
 <style scoped>
-div {
-  height: min-content;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 150px 20px;
-}
-
-p {
-  font-size: calc(1rem + 0.5vw);
-  margin-bottom: 25px;
-}
-
-h2 {
-  text-transform: uppercase;
-  font-size: 56px;
+.container {
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  border: 1px solid blueviolet;
 }
 
 @media screen and (max-width: 950px) {

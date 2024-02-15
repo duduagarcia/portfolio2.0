@@ -1,12 +1,17 @@
 <script setup></script>
 
 <template>
-  <div class="container"><p>About</p></div>
+  <div>
+    <BG color="light" />
+    <div class="container"><p>About</p></div>
+  </div>
 </template>
 
 <style scoped>
-div {
+.container {
+  position: relative;
+  z-index: 2;
   height: 100vh;
-  background-color: salmon;
+  border: 1px solid salmon;
 }
 </style>
