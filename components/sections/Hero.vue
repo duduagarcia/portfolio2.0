@@ -14,40 +14,38 @@ const h1 = ref(null);
 </script>
 
 <template>
-  <div>
-    <BG color="light" />
+  <div style="position: relative">
+    <BG color="dark" />
     <main class="container">
-      <h1>oi</h1>
-      <Accordion
-        title="Plugways Digital LTDA / Full stack developer"
-        start="Sep 2023"
-        end="Feb 2024"
-        description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate enim aut dignissimos, ipsum nesciunt accusamus ex ipsa quae totam rerum placeat eaque quidem repellat consequatur labore harum porro tempore eligendi!"
-      />
-      <Accordion
-        title="Freelancer at Manuteno / Front end developer"
-        start="Sep 2023"
-        end="Feb 2024"
-        description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate enim aut dignissimos, ipsum nesciunt accusamus ex ipsa quae totam rerum placeat eaque quidem repellat consequatur labore harum porro tempore eligendi!"
-      />
-      <Accordion
-        title="027Capital / Front end developer"
-        start="Aug 2022"
-        end="Aug 2023"
-        description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate enim aut dignissimos, ipsum nesciunt accusamus ex ipsa quae totam rerum placeat eaque quidem repellat consequatur labore harum porro tempore eligendi!"
-        last-one="true"
-      />
+      <h1>Building experiences, not just <br />static interfaces</h1>
+      <div class="subtitle">
+        <div class="col1">
+          <p>
+            Developer, Motion Designer<br />
+            & Freelancer
+          </p>
+        </div>
+        <div class="col2">
+          <p>
+            Helping people and companies to<br />
+            stand out in the digital era.
+          </p>
+          <a href="#">Contact</a>
+        </div>
+      </div>
     </main>
   </div>
 </template>
 
 <style scoped>
 .container {
-  height: 100vh;
+  height: max-content;
   color: #fff;
   z-index: 2;
   position: relative;
   border: 1px solid red;
+  height: max-content;
+  padding: 150px 20px;
 }
 
 h1 {
@@ -55,6 +53,7 @@ h1 {
   overflow-wrap: break-word;
   word-wrap: break-word;
   font-weight: 500;
+  margin-bottom: 80px;
 }
 
 main .subtitle {
@@ -64,13 +63,15 @@ main .subtitle {
   width: 100%;
 }
 
-main .subtitle p {
+main .subtitle .col1 {
   text-transform: uppercase;
 }
 
-main .subtitle div p {
-  max-width: 280px;
-  text-transform: none;
-  margin-bottom: 25px;
+main .subtitle .col2 a {
+  margin-top: 20px;
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
 }
 </style>

@@ -49,6 +49,7 @@ function toggleAccordion() {
   min-width: 150px;
   width: 100%;
   border-top: 1px solid #c8c8c8;
+  background-color: #fff;
 }
 
 .lastone {
