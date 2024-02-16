@@ -28,10 +28,14 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
+  <div style="position: relative">
     <BG color="dark" />
     <div class="container">
-      <p style="color: #fff">intro</p>
+      <p>Not just a developer, but a <span>problem solver</span></p>
+      <h2>
+        Guided by discoveries<br />Boosted by research<br />Who designes with
+        purpose<br />and develops for people<br />to achieve tangible results
+      </h2>
     </div>
   </div>
 </template>
@@ -40,8 +44,24 @@ onMounted(() => {
 .container {
   position: relative;
   z-index: 2;
-  height: 100vh;
-  border: 1px solid blueviolet;
+  height: max-content;
+  padding: 150px 20px;
+}
+
+p {
+  font-size: 24px;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+p span {
+  color: aqua;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 56px;
+  color: #fff;
 }
 
 @media screen and (max-width: 950px) {

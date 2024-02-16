@@ -43,7 +43,6 @@ const h1 = ref(null);
   color: #fff;
   z-index: 2;
   position: relative;
-  border: 1px solid red;
   height: max-content;
   padding: 150px 20px;
 }
