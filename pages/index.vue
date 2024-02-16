@@ -39,12 +39,12 @@ useHead({
 <template>
   <div>
     <!-- <Navbar /> -->
-    <Hero />
-    <Intro />
-    <LazyWorks />
-    <LazyAbout />
-    <Experiences />
-    <LazySkills />
-    <Footer />
+    <SectionsHero />
+    <SectionsIntro />
+    <LazySectionsWorks />
+    <LazySectionsAbout />
+    <SectionsExperiences />
+    <LazySectionsSkills />
+    <SectionsFooter />
   </div>
 </template>
