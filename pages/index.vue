@@ -41,7 +41,7 @@ useHead({
     <!-- <Navbar /> -->
     <SectionsHero />
     <SectionsIntro />
-    <LazySectionsWorks />
+    <!-- <LazySectionsWorks /> -->
     <LazySectionsAbout />
     <SectionsExperiences />
     <LazySectionsSkills />

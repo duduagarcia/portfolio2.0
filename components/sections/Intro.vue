@@ -69,4 +69,20 @@ h2 {
     font-size: calc(1.5rem + 2.5vw);
   }
 }
+
+@media screen and (max-width: 800px) {
+  .container {
+    padding-left: 35px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  p {
+    font-size: 16px;
+  }
+
+  p span {
+    display: block;
+  }
+}
 </style>
