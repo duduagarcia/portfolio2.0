@@ -9,16 +9,28 @@ console.log("works.vue");
       <h2>Featured Projects</h2>
       <div class="grid-container">
         <div class="col1">
-          <div class="card"></div>
-          <div class="card"></div>
+          <ProjectCard
+            title="Nubank"
+            description="A website redesign of one the largest Brazilian fintechs."
+          />
+          <ProjectCard
+            title="Erick Avila"
+            description="One of the best designers i know."
+          />
         </div>
         <div class="col2">
           <p>
             A selected set of projects and experiments i'm building as a
             navigate through ideias and technologies
           </p>
-          <div class="card"></div>
-          <div class="card"></div>
+          <ProjectCard
+            title="Component lib"
+            description="My own component library based on top of the best Javascript Framework."
+          />
+          <ProjectCard
+            title="Spiderman"
+            description="A cool motion based website for the Friendly Neighborhood Spidey,"
+          />
         </div>
       </div>
     </div>
@@ -30,14 +42,12 @@ console.log("works.vue");
   position: relative;
   z-index: 2;
   height: max-content;
-  border: 1px solid teal;
-  padding: 150px 20px;
+  padding: 150px 20px 0 20px;
 }
 
 h2 {
-  font-size: 96px;
+  font-size: 72px;
   font-weight: 400;
-  background-color: rebeccapurple;
   margin-bottom: 80px;
 }
 
@@ -62,10 +72,40 @@ h2 {
   max-width: 300px;
 }
 
-.card {
-  width: 340px;
-  height: 432px;
-  background-color: #d1d1d1;
-  margin-bottom: 90px;
+@media screen and (max-width: 900px) {
+  h2 {
+    margin-bottom: 20px;
+    font-size: 42px;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "col2"
+      "col1";
+    grid-template-columns: 1fr;
+  }
+
+  .grid-container .col1 {
+    padding-left: 0;
+  }
+
+  .grid-container .col2 {
+    padding: 0;
+  }
+
+  .grid-container .col2 p {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  h2 {
+    margin-bottom: 20px;
+    margin-left: 10px;
+  }
+  .grid-container .col2 p {
+    margin-left: 10px;
+  }
 }
 </style>
