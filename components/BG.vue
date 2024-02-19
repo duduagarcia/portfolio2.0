@@ -34,7 +34,7 @@ const props = defineProps({
   height: 100%;
   padding: 0 50px;
   display: flex;
-  background-color: red;
+  /* background-color: red; */
 }
 
 .bg-dark {
