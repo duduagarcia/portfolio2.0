@@ -1,0 +1,21 @@
+*,
+*::after,
+*::before {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Satoshi", sans-serif;
+}
+
+:root {
+  --white: #fff;
+  --light_gray: #d3d4d7;
+  --dark_gray: #636468;
+  --black_1: #292b2e;
+  --black_2: #28292d;
+  --black_3: #242424;
+
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
