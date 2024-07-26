@@ -23,7 +23,7 @@ export default defineNuxtConfig({
     }
   },
   css: ["~/assets/css/tailwind.css"],
-  modules: ["@nuxtjs/tailwindcss","@hypernym/nuxt-gsap"],
+  modules: ["@nuxtjs/tailwindcss","@hypernym/nuxt-gsap","@pinia/nuxt"],
   gsap: {
     extraPlugins: {
       scrollTrigger: true,
