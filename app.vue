@@ -7,20 +7,17 @@ const { initialLoader, changingRoute, canRenderPage } = storeToRefs(globalStore)
 
 const route = useRoute()
 
-const availableRoutes = ["about", "works", "contact"]
-
-
+const availableRoutes = ["about", "works", "contact", "index"]
 
 watch(() => route.fullPath, (newValue, oldValue) => {
-  console.log("changing route", route)
-
-  console.log("changing route", newValue, oldValue)
 
   if(changingRoute.value == false){
-    if(availableRoutes.includes(newValue.split("/")[1])){
+    if(newValue.split("/")[1]){
+      if(availableRoutes.includes(newValue.split("/")[1])){
+        changingRoute.value = true
+      }
+    }else{
       changingRoute.value = true
-      console.log("ATENDEU TUDO")
-
     }
   }
 })
@@ -44,3 +41,14 @@ onMounted(() => {
     </NuxtLayout>
   </div>
 </template>
+
+<style>
+
+.page-leave-active {
+  transition: all 0.4s;
+}
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
+}
+</style>

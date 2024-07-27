@@ -1,7 +1,19 @@
-<script setup></script>
+<script setup>
+import { useGlobalStore } from '../stores/globalStore';
+import { storeToRefs } from '#imports';
+
+const globalStore = useGlobalStore();
+const { initialLoader, changingRoute, canRenderPage } = storeToRefs(globalStore);
+
+const { $gsap } = useNuxtApp();
+
+
+</script>
 
 <template>
-    <h1>Works</h1>
+    <div v-if="changingRoute == false">
+        <h1 class="text-4xl">Works</h1>
+    </div>
 </template>
 
 <style scoped>
