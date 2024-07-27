@@ -1,9 +1,10 @@
 import { defineStore } from "pinia";
 
 export const useGlobalStore = defineStore('globalStore', () => {
-    const initialLoader : boolean = true
+    const initialLoader  = ref(false)
+    const changingRoute = ref(false)
+    const canRenderPage = ref(false)
 
-    const fuckMe: string = "diowendfiowejdiojn"
 
-    return {initialLoader, fuckMe}
+    return {initialLoader, changingRoute,canRenderPage}
 })
