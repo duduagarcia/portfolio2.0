@@ -29,7 +29,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="w-screen h-screen max-w-full absolute top-0">
+    <div class="w-screen h-screen max-w-full absolute top-0 z-50">
         <div class="h-[20vh] w-screen bg-brand_black_3 box" v-for="i in 5" :key="i"></div>
     </div>
 </template>

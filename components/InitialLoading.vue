@@ -28,6 +28,6 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="w-screen h-screen max-w-full absolute top-0 pointer-events-none bg-red-500 box">
+    <div class="w-screen h-screen max-w-full absolute top-0 pointer-events-none bg-red-500 box z-50">
     </div>
 </template>
