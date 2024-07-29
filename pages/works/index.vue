@@ -11,7 +11,9 @@ const { $gsap } = useNuxtApp();
 </script>
 
 <template>
-    <div v-if="changingRoute == false">
+    <div v-if="changingRoute == false" >
+    <HeaderVue />
+
         <h1 class="text-4xl">Works</h1>
     </div>
 </template>
