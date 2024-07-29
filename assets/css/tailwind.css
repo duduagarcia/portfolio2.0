@@ -12,12 +12,13 @@
 }
 
 :root {
-  --white: #fff;
-  --light_gray: #d3d4d7;
-  --dark_gray: #636468;
-  --black_1: #292b2e;
-  --black_2: #28292d;
-  --black_3: #242424;
+  --brand_white: #fff;
+  --brand_light_gray: #d3d4d7;
+  --brand_dark_gray: #636468;
+  --brand_black_1: #292b2e;
+  --brand_black_2: #28292d;
+  --brand_black_3: #242424;
+  --brand_black_4: #0F0F0F;
 
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);

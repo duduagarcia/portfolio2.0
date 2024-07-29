@@ -31,7 +31,7 @@ onMounted(() => {
 
 <template>
   <div>
-    <InitialLoading v-if="initialLoader"/>
+    <!-- <InitialLoading v-if="initialLoader"/> -->
     <PageTransitionLoading v-if="changingRoute"/>
     <NuxtPage/>
   </div>

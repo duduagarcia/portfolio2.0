@@ -11,6 +11,7 @@ export default {
         brand_black_2: '#28292D',
         brand_black_3: '#242424',
         brand_black_4: '#0F0F0F',
+        border_light_gray: 'solid 1px #D3D4D7',
       }
     },
   },
