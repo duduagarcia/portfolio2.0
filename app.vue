@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useGlobalStore } from './stores/globalStore';
 import { storeToRefs } from '#imports';
+import { useSmoothScroll } from '#imports';
 
 const globalStore = useGlobalStore();
 const { initialLoader, changingRoute, canRenderPage } = storeToRefs(globalStore);
@@ -26,6 +27,8 @@ onMounted(() => {
   initialLoader.value = true
 
   console.log("helloo", initialLoader.value)
+
+  useSmoothScroll()
 })
 </script>
 

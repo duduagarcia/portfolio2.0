@@ -1,25 +1,66 @@
 <script setup>
-import LocomotiveScroll from "locomotive-scroll";
-// onMounted(() => {
-//     if (typeof document !== 'undefined') {
-//     const scroll = new LocomotiveScroll({
-//       el: document.querySelector("[data-scroll-container]"),
-//       smooth: true,
-//     });
-//   }
-// });
+const { $gsap } = useNuxtApp();
+
+onMounted(() => {
+  const tl = $gsap.timeline();
+
+  $gsap.to("#row1", {
+    x: 100,
+    scrollTrigger: {
+      trigger: "#row1",
+      start: "center 30%",
+      end: "bottom center",
+      scrub: true,
+      markers: true,
+    },
+  });
+
+  $gsap.to("#row2", {
+    x: -100,
+    scrollTrigger: {
+      trigger: "#row2",
+      start: "top center",
+      end: "bottom center",
+      scrub: true,
+    },
+  });
+
+  $gsap.to("#row3", {
+    x: 100,
+    scrollTrigger: {
+      trigger: "#row3",
+      start: "top center",
+      end: "bottom center",
+      scrub: true,
+    },
+  });
+
+  $gsap.to("#row4", {
+    x: -100,
+    scrollTrigger: {
+      trigger: "#row4",
+      start: "top center",
+      end: "bottom center",
+      scrub: true,
+    },
+  });
+
+  $gsap.to("#row5", {
+    x: 100,
+    scrollTrigger: {
+      trigger: "#row5",
+      start: "top center",
+      end: "bottom center",
+      scrub: true,
+    },
+  });
+});
 </script>
 
 <template>
   <section class="tiles tiles--rotated" id="grid2">
     <div class="tiles__wrap">
-      <div
-        class="tiles__line"
-        data-scroll
-        data-scroll-speed="1"
-        data-scroll-target="#grid2"
-        data-scroll-direction="horizontal"
-      >
+      <div class="tiles__line" id="row1">
         <div class="tiles__line-img"></div>
         <div class="tiles__line-img"></div>
         <div class="tiles__line-img"></div>
@@ -36,13 +77,7 @@ import LocomotiveScroll from "locomotive-scroll";
           style="background-image: url(/6.jpg)"
         ></div>
       </div>
-      <div
-        class="tiles__line"
-        data-scroll
-        data-scroll-speed="-1"
-        data-scroll-target="#grid2"
-        data-scroll-direction="horizontal"
-      >
+      <div class="tiles__line" id="row2">
         <div class="tiles__line-img"></div>
         <div
           class="tiles__line-img"
@@ -65,13 +100,7 @@ import LocomotiveScroll from "locomotive-scroll";
           style="background-image: url(/12.jpg)"
         ></div>
       </div>
-      <div
-        class="tiles__line"
-        data-scroll
-        data-scroll-speed="1"
-        data-scroll-target="#grid2"
-        data-scroll-direction="horizontal"
-      >
+      <div class="tiles__line" id="row3">
         <div
           class="tiles__line-img"
           style="background-image: url(/13.jpg)"
@@ -97,13 +126,7 @@ import LocomotiveScroll from "locomotive-scroll";
           style="background-image: url(/18.jpg)"
         ></div>
       </div>
-      <div
-        class="tiles__line"
-        data-scroll
-        data-scroll-speed="-1"
-        data-scroll-target="#grid2"
-        data-scroll-direction="horizontal"
-      >
+      <div class="tiles__line" id="row4">
         <div
           class="tiles__line-img"
           style="background-image: url(/19.jpg)"
@@ -126,13 +149,7 @@ import LocomotiveScroll from "locomotive-scroll";
         ></div>
         <div class="tiles__line-img"></div>
       </div>
-      <div
-        class="tiles__line"
-        data-scroll
-        data-scroll-speed="1"
-        data-scroll-target="#grid2"
-        data-scroll-direction="horizontal"
-      >
+      <div class="tiles__line" id="row5">
         <div class="tiles__line-img"></div>
         <div
           class="tiles__line-img"
@@ -154,12 +171,33 @@ import LocomotiveScroll from "locomotive-scroll";
 </template>
 
 <style scoped>
+#row1 {
+  background-color: greenyellow;
+}
+
+#row2 {
+  background-color: royalblue;
+}
+
+#row3 {
+  background-color: seagreen;
+}
+
+#row4 {
+  background-color: slateblue;
+}
+
+#row4 {
+  background-color: salmon;
+}
+
 .tiles {
   --tiles-height: 52vw;
   height: var(--tiles-height);
   position: relative;
   overflow: hidden;
   background-color: var(--brand_black_3);
+  /* min-height: 100vh; */
 }
 
 .tiles__wrap {
@@ -203,5 +241,16 @@ import LocomotiveScroll from "locomotive-scroll";
   --tile-margin: 1vw;
   width: calc(16.6666% - var(--tile-margin) * 2);
   height: calc(var(--tileswrap-height) / 5 - (4 * var(--tile-margin) / 2));
+}
+
+@media screen and (max-width: 800px) {
+  .tiles {
+    --tiles-height: 60vw;
+    height: var(--tiles-height);
+    position: relative;
+    overflow: hidden;
+    background-color: var(--brand_black_3);
+    /* min-height: 100vh; */
+  }
 }
 </style>

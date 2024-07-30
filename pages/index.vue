@@ -9,20 +9,14 @@ const { initialLoader, changingRoute, canRenderPage } =
 const { $gsap } = useNuxtApp();
 
 onMounted(() => {
-  // $gsap.to("#box", {
-  //     backgroundColor: "blue",
-  //     scrollTrigger: {
-  //       trigger: "#box",
-  //       start: "center 50%",
-  //       scrub: true,
-  //       markers: true
-  //     },
-  // })
+
+
+
 });
 </script>
 
 <template>
-  <main v-if="changingRoute == false" class="w-screen max-w-full min-h-screen">
+  <main v-if="changingRoute == false" class="w-screen max-w-full min-h-screen " >
     <HeaderVue />
 
     <section
@@ -46,10 +40,14 @@ onMounted(() => {
     <ImageGrid />
     <section class="px-7 w-screen max-w-full py-52 h-max bg-red-500">
       <h2>
-        A problem solver guided by research, that designes with purpose and
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A problem solver guided by research, that designes with purpose and
         develops for people to achieve tangible results.
       </h2>
     </section>
+    <section class="bg-blue-400 h-screen w-full"></section>
+
+    <section class="bg-green-400 h-screen w-full flex justify-center items-center relative"></section>
+
   </main>
 </template>
 
@@ -65,4 +63,15 @@ h2 {
   background-color: rebeccapurple;
 }
 
+
+
+/* @media screen and (max-width: 600px){
+  .card{
+  
+  width: calc(2rem + 30vw);
+
+
+  height: calc(3rem + 30vh);
+}
+} */
 </style>
