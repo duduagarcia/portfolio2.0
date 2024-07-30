@@ -11,12 +11,22 @@ const { $gsap } = useNuxtApp();
 </script>
 
 <template>
-    <div v-if="changingRoute == false" >
-    <HeaderVue />
+    <main v-if="changingRoute == false" class="w-screen max-w-full min-h-screen">
+        <HeaderVue />
+        <section
+      class=" -full   px-7 pt-32 "
+    >
+    <h1 class="uppercase font-medium">Selected<br>works</h1>
+    <p class="w-[200px] text-brand_dark_gray">Some opportunities and projects that i'm proud of!</p>
 
-        <h1 class="text-4xl">Works</h1>
-    </div>
+</section>
+    </main>
+
 </template>
 
 <style scoped>
+h1 {
+  font-size: calc(2.5rem + 3vw);  
+}
+
 </style>

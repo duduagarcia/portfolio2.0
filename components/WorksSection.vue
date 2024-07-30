@@ -1,55 +1,107 @@
 <script setup>
-  // $gsap.to(".card", {
-  //     y: '-160vh',
-  //     scrollTrigger: {
-  //       trigger: ".special",
-  //       start: "center center",
-  //       end: "+=100%",
-  //       pin: ".fuck",
-  //       scrub: true,
-  //       markers: true
-  //     },
-  // })
+const { $gsap } = useNuxtApp();
+
+const activeOverlay = ref(false);
+onMounted(() => {
+
+  const cards = document.querySelectorAll(".card");
+
+  // cards.forEach((card) => {
+  //   card.addEventListener("mouseenter", () => {
+  //     activeOverlay.value = true;
+  //   });
+  //   card.addEventListener("mouseleave", () => {
+  //     activeOverlay.value = false;
+  //   });
+  // });
+
+  
+  $gsap.to(".card", {
+   y: "-200vh",
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".h2",
+      start: "center center",
+      end: "+=600%",
+      pin: ".container",
+      scrub: true,
+      markers: true,
+    },
+  });
+});
 </script>
 
 <template>
-        <section class="bg-brand_white h-screen w-full flex justify-center items-center relative fuck" style="position: relative;">
-      <h2 class="uppercase special">Work</h2>
-      <div class="card c1"></div>
-      <div class="card c2"></div>
-      <div class="card c3"></div>
-    </section>
+  <section
+    class="h-screen w-full flex justify-center items-center bg-brand_white px-5 container"
+  >
+    <div class="h2 relative">
+      <h2>
+
+        Work
+      </h2>
+      <div class="card c1">
+        <NuxtImg src="/mockup1.jpg" width="300" height="500" quality="100" format="webp" fit="cover"/>
+      </div>
+      <div class="card c2">
+        <NuxtImg src="/mockup2.jpg" width="300" height="500" quality="100" format="webp" fit="cover"/>
+      </div>
+      <div class="card c3">
+        <NuxtImg src="/mockup3.jpg" width="300" height="500" quality="100" format="webp" fit="cover"/>
+      </div>
+    </div>
+  </section>
+  <div class="overlay" :class="{activeOverlay: activeOverlay}"></div>
 </template>
 
 <style scoped>
-.special{
-  font-size: calc(4rem + 15vw);  
+h2 {
+  font-size: calc(4rem + 15vw);
+  text-transform: uppercase;
+  position: relative;
+  z-index: 100;
+  pointer-events: none;
 }
 
-.card{
+.card {
   position: absolute;
-  z-index: 999;
-  background-color: var(--brand_dark_gray);
   width: 300px;
   max-width: 300px;
-
-
   height: 500px;
-  /* top: 100vh;
-  right: 40px; */
+  top: 100vh;
+  cursor: pointer;
 }
 
-.c1{
+.c1 {
   background-color: red;
+  right: 0;
+  z-index: 10;
 }
 
-.c2{
+.c2 {
   background-color: greenyellow;
-  right: 200px;
+  left: 50%;
+  transform: translateX(-50%, -50%);
+  z-index: 10;
 }
 
-.c3{
+.c3 {
   background-color: blue;
-  left: 100px;
+  z-index: 110;
+}
+
+.overlay{
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  opacity: .3;
+  display: none;
+}
+
+.activeOverlay{
+  display: block;
 }
 </style>

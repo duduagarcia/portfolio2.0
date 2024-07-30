@@ -16,7 +16,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <main v-if="changingRoute == false" class="w-screen max-w-full min-h-screen " >
+  <main v-if="changingRoute == false" class="w-screen max-w-full min-h-screen" >
     <HeaderVue />
 
     <section
@@ -47,7 +47,10 @@ onMounted(() => {
     <section class="bg-blue-400 h-screen w-full"></section>
 
     <section class="bg-green-400 h-screen w-full flex justify-center items-center relative"></section>
-
+    <WorksSection />
+    <section class="bg-green-700 h-screen w-full flex justify-center items-center ">
+      <h2>Not an ordinary developer, i'm rarely satisfied with my own work, but that end's up being what set's me apart</h2>
+    </section>
   </main>
 </template>
 
