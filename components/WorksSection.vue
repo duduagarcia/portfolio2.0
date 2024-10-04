@@ -7,10 +7,10 @@ onMounted(() => {
   const cards = document.querySelectorAll(".card");
 
   // cards.forEach((card) => {
-  //   card.addEventListener("mouseenter", () => {
+  //   card.addEventListener("mouseover", () => {
   //     activeOverlay.value = true;
   //   });
-  //   card.addEventListener("mouseleave", () => {
+  //   card.addEventListener("mouseout", () => {
   //     activeOverlay.value = false;
   //   });
   // });
@@ -23,9 +23,9 @@ onMounted(() => {
       trigger: ".h2",
       start: "center center",
       end: "+=600%",
-      pin: ".container",
+      pin: ".container22",
       scrub: true,
-      markers: true,
+      // markers: true,
     },
   });
 });
@@ -33,11 +33,10 @@ onMounted(() => {
 
 <template>
   <section
-    class="h-screen w-full flex justify-center items-center bg-brand_white px-5 container"
+    class="h-screen w-full flex justify-center items-center px-7 container22"
   >
-    <div class="h2 relative">
+    <div class="h2 relative bg-slate-400 w-max">
       <h2>
-
         Work
       </h2>
       <div class="card c1">
@@ -90,18 +89,28 @@ h2 {
   z-index: 110;
 }
 
+
 .overlay{
-  background-color: black;
+  background-color: red;
   width: 100vw;
   height: 100vh;
   position: fixed;
-  z-index: 1000;
+  z-index: 900;
   top: 0;
-  opacity: .3;
-  display: none;
+  opacity: .9;
+  display: none
 }
 
 .activeOverlay{
   display: block;
+}
+
+
+@media screen and (max-width: 600px){
+  h2{
+    font-size: calc(4rem + 10vw);
+    font-weight: 400;
+  }
+  
 }
 </style>

@@ -37,14 +37,13 @@ onMounted(() => {
         pleasing.
       </p>
     </section>
-    <ImageGrid />
+    <!-- <ImageGrid /> -->
     <section class="px-7 w-screen max-w-full py-52 h-max bg-red-500">
       <h2>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A problem solver guided by research, that designes with purpose and
         develops for people to achieve tangible results.
       </h2>
     </section>
-    <section class="bg-blue-400 h-screen w-full"></section>
 
     <section class="bg-green-400 h-screen w-full flex justify-center items-center relative"></section>
     <WorksSection />

@@ -18,12 +18,15 @@ const navLinks: navLink[] = [
 <template>
     <header class="0 w-screen max-h-full h-14 fixed px-7 z-40 ">
         <nav >
-            <ul class="flex  justify-between gap-4 mt-3">
+            <ul class="flex  justify-between gap-4 mt-3 desktop">
                 <li v-for="navLink,index in navLinks" :key="index" class="nav-link" :class="{'active-link': false}">
                     <NuxtLink :to="navLink.path">{{ navLink.title }}</NuxtLink>
                 </li>
                 <li class="circle"><button class="uppercase">En</button></li>
                 <li class=" circle"><button class="uppercase">Pt</button></li>
+            </ul>
+            <ul class="mt-3 mobile">
+                <li class="nav-link">teste</li>
             </ul>
         </nav>
     </header>
@@ -62,5 +65,20 @@ const navLinks: navLink[] = [
     background-color: var(--brand_black_3);
     color: var(--brand_white);
     border: none;
+}
+
+.mobile{
+    display: none;
+}
+
+@media screen and (max-width: 1000px){
+    .desktop{
+        display: none;
+    }
+
+    .mobile{
+        display: block;
+    }
+    
 }
 </style>
